@@ -1,9 +1,25 @@
+import 'package:app_dev_assignment_2/pages/home_page.dart';
 import 'package:app_dev_assignment_2/pages/login_page.dart';
+import 'package:app_dev_assignment_2/utils/firebase_options.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:app_dev_assignment_2/pages/signup_page.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+  // name: 'web',
+  options: DefaultFirebaseOptions.currentPlatform,
+  // options: FirebaseOptions(
+  //   apiKey: 'AIzaSyAZCklH5V6Ab8wKxfC7wCXblCuyb30qjgk',
+  //   appId: '1:415988989931:web:6c132be33adfd64bf063ae',
+  //   messagingSenderId: 'YOUR_MESSAGING_SENDER_ID',
+  //   projectId: 'appdev-practise',
+  //   storageBucket: 'YOUR_STORAGE_BUCKET',
+  //   authDomain: 'YOUR_AUTH_DOMAIN',
+  // ),
+);
+ runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,6 +41,7 @@ class MyApp extends StatelessWidget {
       routes: {
     '/signup_page':(context) => const SignupPage(),
     '/login_page':(context) => const LoginPage(),
+    '/home_page': (context) => HomePage()
 
   },
 

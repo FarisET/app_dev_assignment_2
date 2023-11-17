@@ -36,6 +36,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   fluttertoast: ^8.2.2
+  firebase_core: ^2.21.0
+  firebase_auth: ^4.12.1
+  cloud_firestore: ^4.12.2
+  provider: ^6.0.5
+  modal_progress_hud_nsn: ^0.4.0
+  google_sign_in: ^6.1.6
+  flutter_facebook_auth: ^6.0.2
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +71,8 @@ flutter:
     - lib/assets/asset1.jpg
     - lib/assets/asset2.jpg
     - lib/assets/asset3.jpg
+    - lib/assets/pngimg.com - google_PNG19635.png
+    - lib/assets/2021_Facebook_icon.svg.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
